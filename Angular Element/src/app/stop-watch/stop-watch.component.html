@@ -1,0 +1,19 @@
+<div class="card">
+    <div class="card-header">
+        <div class="title">Stop Watch
+            <div class="user">Hey! <span style="font-style: italic">{{user}}</span></div>
+        </div> 
+    </div>
+    <div class="card-content">
+        <div class="outer-circle">
+            <div class="inner-circle">
+                <div class="timer-text">{{timerText}}</div>
+            </div>
+        </div>
+        <div class="button-wrap">
+            <button class="ripple" (click)="startWatch()" *ngIf="!timerStarted">Play</button>
+            <button class="ripple" (click)="pauseWatch()" *ngIf="timerStarted">Pause</button>
+            <button class="ripple" (click)="resetWatch()" *ngIf="timer > 0">Reset</button>
+        </div>
+    </div>
+</div>
